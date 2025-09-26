@@ -5,6 +5,10 @@ body {
   line-height: 1.5;
 }
 
+select {
+  border: none;
+}
+
 /* Limits the width and centers content */
 main {
   max-width: 600px;
@@ -41,7 +45,7 @@ main p {
 }
 
 main p:nth-of-type(2) {
-    margin: .9em 0 0;
+  margin: 0.9em 0 0;
 }
 
 /* Ordered list */
@@ -66,4 +70,28 @@ footer img {
   padding: 2em; /* Adds space around like a page margin */
   border: 1.5px solid #c1c1c1;
   box-shadow: 3px 3px 10px #afafaf; /* optional, subtle depth */
+}
+
+/* *** *** ***
+    DARK MODE  
+   *** *** *** */
+
+.dark {
+  background-color: #1b1b1b; /* deep gray background */
+  color: #d8d8d8; /* light gray text */
+}
+
+.dark select {
+  background-color: #1b1b1b;
+  color: #d8d8d8;
+}
+
+.dark header h2 {
+  border-color: #214491;
+  color: #4f9acf;
+}
+
+.dark .content {
+  border: 1.5px solid #214491;
+  box-shadow: 2px 2px 8px #214491;
 }
