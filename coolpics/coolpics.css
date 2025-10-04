@@ -1,0 +1,157 @@
+:root {
+  --primary-color: #e6dbc9;
+  --secondary-color: #1c2329;
+  --accent-color: #bfa48a;
+  --text-dark: #1c2329;
+  --text-light: #f48034;
+  --primary-font: "Manrope", Arial, Helvetica, sans-serif;
+  --secondary-font: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-family: var(--secondary-font);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/*=======================
+=========HEADER========*/
+header {
+  background-color: var(--secondary-color);
+}
+
+h1,
+h2 {
+  font-family: var(--primary-font);
+  padding: 1.5rem 0 0;
+  margin: 0;
+  text-align: center;
+  color: var(--text-light);
+  letter-spacing: 0.7rem;
+}
+
+.menu {
+  display: none;
+}
+
+/*=======================
+=======NAVIGATION======*/
+ul {
+  padding: 0 0 1rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+nav a {
+  color: var(--primary-color); /* text color */
+  text-decoration: none; /* removes underline */
+  padding: 8px 12px; /* space around each option */
+  display: inline-block; /* makes padding clickable */
+}
+
+nav a:hover {
+  color: var(--text-light); /* text color change */
+}
+
+/*=======================
+==========MAIN=========*/
+
+main {
+  background-color: var(--primary-color);
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  color: var(--text-dark);
+  padding: 1.5rem 0;
+  letter-spacing: 0.1rem;
+}
+
+.gallery {
+  display: grid;
+  justify-items: center;
+}
+
+img {
+  max-width: 100%;
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
+}
+
+/*=======================
+=========FOOTER========*/
+footer {
+  color: var(--secondary-color);
+  background-color: var(--accent-color);
+}
+
+footer p {
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/*=======================
+=====MEDIA QUERY 1=====*/
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  /*=======================
+========MENU BUTTON======
+(Visible on tablet/mobile)
+========================*/
+  .menu {
+    color: var(--primary-color);
+    border: none;
+    background-color: var(--secondary-color);
+    padding: 1rem 0 1.5rem;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu:hover {
+    color: var(--text-light);
+  }
+}
+
+/*=======================
+=====MEDIA QUERY 2=====*/
+@media screen and (min-width: 1000px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex; /* makes nav horizontal */
+    justify-content: center; /* centers links */
+    gap: 2rem; /* spacing between items */
+  }
+
+  header {
+    padding-bottom: 0;
+  }
+}
