@@ -30,8 +30,23 @@ h2 {
   letter-spacing: 0.7rem;
 }
 
-.menu {
-  display: none;
+/*=======================
+========MENU BUTTON======
+(Visible on tablet/mobile)
+========================*/
+.menu-button {
+  display: block;
+  color: var(--primary-color);
+  border: none;
+  background-color: var(--secondary-color);
+  padding: 1rem 0 1.5rem;
+  font-size: 1.1rem;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  color: var(--text-light);
 }
 
 /*=======================
@@ -55,6 +70,10 @@ nav a {
 
 nav a:hover {
   color: var(--text-light); /* text color change */
+}
+
+.hide {
+  display: none;
 }
 
 /*=======================
@@ -84,6 +103,31 @@ img {
 }
 
 /*=======================
+=========DIALOG========*/
+dialog {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  /* center image inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+dialog .modal-image {
+  width: 90%;
+  height: auto;
+  max-height: 90vh;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/*=======================
 =========FOOTER========*/
 footer {
   color: var(--secondary-color);
@@ -102,32 +146,6 @@ footer p {
   .gallery {
     grid-template-columns: 1fr 1fr;
   }
-
-  nav {
-    display: none;
-  }
-
-  .menu {
-    display: block;
-  }
-
-  /*=======================
-========MENU BUTTON======
-(Visible on tablet/mobile)
-========================*/
-  .menu {
-    color: var(--primary-color);
-    border: none;
-    background-color: var(--secondary-color);
-    padding: 1rem 0 1.5rem;
-    font-size: 1.1rem;
-    margin: 0 auto;
-    transition: background-color 0.3s ease;
-  }
-
-  .menu:hover {
-    color: var(--text-light);
-  }
 }
 
 /*=======================
@@ -137,12 +155,8 @@ footer p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .menu {
+  .menu-button {
     display: none;
-  }
-
-  nav {
-    display: block;
   }
 
   nav ul {
