@@ -2,7 +2,7 @@
   --primary-color: #e6dbc9;
   --secondary-color: #1c2329;
   --accent-color: #bfa48a;
-  --pop-color: #00FFFF;
+  --pop-color: #00ffff;
   --text-dark: #1c2329;
   --text-light: #f48034;
   --primary-font: "Manrope", Arial, Helvetica, sans-serif;
@@ -130,6 +130,7 @@ dialog .modal-image {
   height: 2rem;
   background: transparent;
   border: none;
+  outline: none; /* removes the focus outline when page opens */
   cursor: pointer;
   z-index: 10;
   color: var(--pop-color);
