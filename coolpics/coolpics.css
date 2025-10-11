@@ -2,6 +2,7 @@
   --primary-color: #e6dbc9;
   --secondary-color: #1c2329;
   --accent-color: #bfa48a;
+  --pop-color: #00FFFF;
   --text-dark: #1c2329;
   --text-light: #f48034;
   --primary-font: "Manrope", Arial, Helvetica, sans-serif;
@@ -46,7 +47,7 @@ h2 {
 }
 
 .menu-button:hover {
-  color: var(--text-light);
+  color: var(--pop-color);
 }
 
 /*=======================
@@ -69,7 +70,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--text-light); /* text color change */
+  color: var(--pop-color); /* text color change */
 }
 
 .hide {
@@ -125,6 +126,14 @@ dialog .modal-image {
   position: absolute;
   top: 1rem;
   right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  color: var(--pop-color);
+  transform: scale(2); /* scales the X inside proportionally */
 }
 
 /*=======================
