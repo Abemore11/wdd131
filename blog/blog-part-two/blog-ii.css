@@ -1,0 +1,121 @@
+:root {
+  --gold-color: #efc69b;
+  --red-color: #af1b3f;
+  --dark-color: #473144;
+  --primary-font: "Manrope", Arial, Helvetica, sans-serif;
+  --secondary-font: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+/* === BODY MARGIN RESET === */
+body {
+  margin: 0;
+  font-family: var(--secondary-font);
+  color: var(--dark-color);
+}
+
+/* === HEADER === */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000; /* dark background so it's readable */
+  color: #fff;
+  padding: 8px 16px;
+  margin-left: 10px;
+  text-decoration: none; /* removes underline */
+  z-index: 1000; /* makes sure it’s on top when visible */
+}
+
+.skiptocontent a:focus {
+  top: 10px; /* bring it onto the screen */
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+  font-family: var(--primary-font);
+  letter-spacing: 0.09rem;
+}
+
+/* === NAVIGATION === */
+nav {
+  border-top: 1px solid var(--gold-color);
+  border-bottom: 1px solid var(--gold-color);
+  padding: 0.4rem 0;
+}
+
+.main-nav {
+  display: grid;
+  grid-template-columns: 120px 120px 150px; /* Makes each column 120px */
+  justify-content: end; /* Grid goes to the right side */
+  list-style: none;
+}
+
+nav ul li a {
+  font-size: 1.2rem;
+  color: var(--red-color);
+}
+
+/* === MAIN === */
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  max-width: 90%;
+  margin: 2rem auto 0;
+}
+
+/* Each book entry (left + middle) */
+.book {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* left column narrower */
+  margin-bottom: 3rem;
+}
+
+/* === left-column == */
+.left-column {
+  display: grid;
+  justify-items: end;
+  row-gap: 0.5rem;
+  grid-auto-rows: min-content;
+  border-right: 1px solid var(--gold-color);
+  padding-right: 1rem;
+}
+
+.left-column p {
+  margin: 0;
+}
+
+.left-column p:first-child {
+  padding-top: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* == middle-column == */
+.middle-column {
+  padding: 0 1.5rem;
+}
+
+.middle-column h2 {
+  margin-top: 0;
+  color: var(--red-color);
+  font-family: var(--primary-font);
+  letter-spacing: 0.07rem;
+}
+
+.middle-column figure {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+/* == right-column ==*/
+.right-column {
+  border: 1px solid var(--gold-color);
+}
+
+/* === FOOTER === */
+footer {
+  text-align: center;
+  padding: 5rem 0;
+}
