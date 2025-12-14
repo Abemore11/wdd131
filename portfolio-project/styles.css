@@ -1,0 +1,463 @@
+:root {
+  /* Colors */
+  --primary-color: #e8eaf0; /* Soft white */
+  --secondary-color: #0a1a3f; /* Deep Executive Navy — darker but NOT saturated */
+  --accent-color: #111318; /* Graphite Black — neutral & matches the slate */
+  --pop-color: #c3a675; /* Cardamom Gold — works perfectly */
+  --text-light: #e8eaf0; /* Soft white */
+  --text-dark: #111318; /* Use the darkest blue for text on light pop */
+
+  /* Fonts */
+  --primary-font: "TikTok Sans", Arial, Helvetica, sans-serif; /* headings */
+  --secondary-font: "Inter", Arial, Helvetica, sans-serif; /* body text */
+}
+
+/* ========================= */
+/* RESET + BASE */
+/* ========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--secondary-font);
+  line-height: 1.65;
+}
+
+/* Simple centered container */
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ========================= */
+/* HOME HEADER / HERO */
+/* ========================= */
+header {
+  background: var(--secondary-color);
+  color: var(--pop-color);
+  padding: 6rem 0 8rem;
+  border-bottom: 6px solid var(--pop-color);
+}
+
+/*=======================
+========MENU BUTTON======
+(Visible on mobile only)
+========================*/
+.hide {
+  display: none;
+}
+
+.menu-button {
+  display: block;
+  color: var(--pop-color);
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  font-size: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+  color: var(--text-light);
+}
+
+/* Navigation */
+nav ul {
+  position: absolute;
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  font-family: var(--primary-font);
+  font-size: 1.1rem;
+  letter-spacing: 0.07rem;
+  transition: opacity 0.2s ease;
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
+/* Hero Heading */
+h1 {
+  font-family: var(--primary-font);
+  font-size: 2.7rem;
+  margin: 3rem 0 1rem;
+  letter-spacing: -0.5px;
+  color: var(--text-light);
+}
+
+/* Hero Subtext */
+header p {
+  font-size: 1.1rem;
+  color: var(--pop-color);
+  margin: 0 auto 30px;
+}
+
+/* Contact Button */
+header .btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--text-light);
+  color: var(--secondary-color);
+  text-decoration: none;
+  border-radius: 5px;
+  letter-spacing: 0.07rem;
+  font-weight: 600;
+  transition: background-color 0.2s, transform 0.2s ease;
+}
+
+header .btn:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+}
+
+/* Active click - presses down */
+header .btn:active {
+  transform: translateY(0px);
+}
+
+/* ========================= */
+/* HOME SECTION BASE STYLES */
+/* ========================= */
+section {
+  padding: 6rem 0;
+}
+
+section h2 {
+  font-family: var(--primary-font);
+  color: var(--text-dark);
+  font-size: 2.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ========================= */
+/* HOME ABOUT SECTION */
+/* ========================= */
+#about {
+  background: var(--pop-color);
+  border-top: 6px solid var(--secondary-color);
+  border-bottom: 6px solid var(--accent-color);
+}
+
+#about p {
+  max-width: 750px;
+  font-size: 1.1rem;
+  margin-bottom: 2.25rem;
+  color: var(--text-dark);
+}
+
+/* Highlight grid */
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+/* About highlights & keyword tags */
+.highlight {
+  background: var(--accent-color);
+  color: var(--text-light);
+  padding: 0.75rem 0.875rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: transform 0.15s ease, background 0.2s ease;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); /* soft shadow for depth */
+}
+
+.highlight:hover {
+  background: var(--pop-color);
+  color: var(--text-dark);
+  border-left: 5px solid var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* ========================= */
+/* HOME TECH SECTION */
+/* ========================= */
+#tech {
+  background: var(--accent-color);
+  border-top: 6px solid var(--pop-color);
+  padding-bottom: 8rem;
+}
+
+#tech h2 {
+  color: var(--pop-color);
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.tech-item {
+  background-color: var(--accent-color);
+  color: var(--pop-color);
+  padding: 0.75rem 0.875rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.tech-item:hover {
+  border-left: 3px solid var(--pop-color);
+  border-right: 3px solid var(--pop-color);
+  transform: translateY(-3px);
+}
+
+/* ========================= */
+/* HOME FOOTER */
+/* ========================= */
+footer {
+  background: var(--secondary-color);
+  text-align: center;
+  padding: 4rem 0;
+  font-family: var(--primary-font);
+}
+
+footer a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.07rem;
+  transition: color 0.2s;
+}
+
+footer a:hover {
+  color: var(--pop-color);
+}
+
+footer img {
+  width: 3.75rem;
+  height: 3.75rem;
+  vertical-align: middle;
+}
+
+/* ============================================== */
+/* PROJECTS PAGE STYLES */
+/* ============================================== */
+#projects {
+  background-color: var(--pop-color);
+  border-top: 6px solid var(--secondary-color);
+  border-bottom: 6px solid var(--secondary-color);
+}
+
+#projects h2 {
+  color: var(--accent-color);
+}
+
+span {
+  font-style: italic;
+}
+
+/* ================================
+   PROJECTS PAGE - SEARCH BAR
+================================ */
+#search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0 2rem 0;
+}
+
+/* Search button */
+#search-form button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border: none;
+  background-color: var(--accent-color);
+  color: var(--pop-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+/* Input field */
+#search-input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: var(--pop-color);
+  color: var(--text-dark);
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  /* floating shadow */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25), 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Focus glow */
+#search-input:focus {
+  /* sink down into stone */
+  transform: translateY(2.5px);
+  /* remove floating look */
+  background-color: transparent;
+  /* text looks engraved/written */
+  color: #2e2414;
+  /* inner groove shadow */
+  box-shadow: inset 3px 3px 4px rgba(0, 0, 0, 0.38), inset -2px -2px 3px rgba(255, 255, 255, 0.22);
+}
+
+/* Hover effect */
+#search-form button:hover {
+  transform: translateY(-2px);
+}
+
+/* Active click - presses down */
+#search-form button:active {
+  transform: translateY(0px);
+}
+
+/* ================================
+   PROJECT CARDS (Grid Layout)
+================================ */
+/* adds spacing between project cards */
+#projects-container {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Card container */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background-color: var(--accent-color);
+  color: var(--pop-color);
+  filter: brightness(87%);
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 5px 5px 14px var(--secondary-color); /* soft shadow for depth */
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.project-card:hover {
+  background-color: transparent;
+  color: var(--accent-color);
+  transform: translateY(-5px);
+  border-left: 8px solid var(--accent-color);
+  box-shadow: none;
+}
+
+/* Title */
+.project-title a {
+  color: var(--pop-color);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.02rem;
+}
+
+.project-title a:hover {
+  text-decoration: underline;
+}
+
+/* Image */
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  max-height: 220px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4); /* soft shadow for depth */
+  transition: all 0.25s ease;
+}
+
+.project-image:hover {
+  transform: translateY(-3px);
+}
+
+/* Description */
+.project-description {
+  line-height: 1.6;
+  font-weight: 650;
+  letter-spacing: 0.03rem;
+}
+
+/* inherits color from card */
+.project-title a,
+.project-description {
+  color: inherit;
+}
+
+/* Keywords wrapper */
+.keywords {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.keyword {
+  background: var(--accent-color);
+  color: var(--text-light);
+  padding: 0.5rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: transform 0.25s ease;
+  letter-spacing: 0.05rem;
+}
+
+/* Shadow effect when hovering over entire card */
+.project-card:hover .keyword {
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4); /* soft shadow for depth */
+}
+
+.keyword:hover {
+  box-shadow: none !important;
+  background: transparent;
+  color: var(--text-dark);
+  border-left: 4px solid var(--accent-color);
+  border-right: 4px solid var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* SCREEN > 499px */
+@media (min-width: 500px) {
+  /* Hide top menu hamburger button */
+  .menu-button {
+    display: none;
+  }
+
+  .menu {
+    display: block !important;
+    padding-bottom: 2rem;
+  }
+
+  /* Un-stack search bar and button */
+  #search-form {
+    flex-direction: row;
+    max-width: 650px;
+  }
+
+  #search-input {
+    flex: 1;
+  }
+
+  .keyword {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  /* Footer un-stack */
+  footer a p {
+    display: inline-block;
+    font-size: 1.2rem;
+    vertical-align: middle;
+  }
+}

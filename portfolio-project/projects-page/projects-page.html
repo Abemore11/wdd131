@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Abraham Moreno - Software Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Portfolio website for Abraham Moreno, Software Developer, portfolio page" />
+    <meta name="author" content="Abraham Moreno" />
+    <link rel="icon" type="image/png" href="#">
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap"
+        rel="stylesheet">
+
+    <!-- STYLES & SCRIPTS -->
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../menu.js" defer></script>
+    <script src="projects-page.js" type="module" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <button class="menu-button">&#9776;</button>
+            <nav class="menu hide">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#projects">Featured Projects</a></li>
+                </ul>
+            </nav>
+            <h1>Software Portfolio</h1>
+            <p>Explore some of the software I’ve <span>designed</span> and <span>built</span>.</p>
+
+            <a class="btn" href="#">Contact Me</a>
+
+        </div>
+    </header>
+
+    <main>
+        <section id="projects">
+            <div class="container">
+
+                <h2>Featured Projects</h2>
+
+                <form id="search-form">
+                    <input type="text" id="search-input" placeholder="Search projects...">
+                    <button type="submit">Search</button>
+                </form>
+
+                <div id="projects-container">
+                    <!-- Dynamic content goes here -->
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/@abe.dev1" target="_blank" rel="noopener noreferrer">
+            <img src="../images/youtube_icon.svg" alt="youtube icon">/@Programming with Abe
+        </a>
+    </footer>
+
+</body>
+
+</html>

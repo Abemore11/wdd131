@@ -1,12 +1,12 @@
 :root {
   --primary-color: #e6dbc9;
   --secondary-color: #1c2329;
-  --accent-color: #bfa48a;
+  --accent-color: #b79c82;
   --pop-color: #00ffff;
   --text-dark: #1c2329;
   --text-light: #f48034;
-  --primary-font: "Manrope", Arial, Helvetica, sans-serif;
-  --secondary-font: "Montserrat", Arial, Helvetica, sans-serif;
+  --primary-font: "TikTok Sans", Arial, Helvetica, sans-serif; /* for headings */
+  --secondary-font: "Inter", Arial, Helvetica, sans-serif; /* for body text */
 }
 
 body {
